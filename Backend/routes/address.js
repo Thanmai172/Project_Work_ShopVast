@@ -1,6 +1,6 @@
 const express = require('express');  
 const { body, validationResult } = require('express-validator');  
-const Address = require('../models/address'); // Adjust the path as needed  
+const Address = require('../models/Address'); // Adjust the path as needed  
 
 const router = express.Router();  
 
