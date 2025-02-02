@@ -12,7 +12,7 @@ const FreelancerDashboard = () => {
     const [mobileCart, setMobileCart] = useState({}); // State to manage mobile cart  
     const [laptopCart, setLaptopCart] = useState({}); // State to manage laptop cart  
     const [clothingCart, setClothingCart] = useState({});
-    const [paymentSuccess, setPaymentSuccess] = useState(false);  
+    const [paymentSuccess] = useState(false);  
     const [addressVisible, setAddressVisible] = useState(false); // State to manage address visibility 
     const [cartVisible, setCartVisible] = useState(false); 
     // const [useAPI, setUseAPI] = useState(false); // Toggle between API and local cart
