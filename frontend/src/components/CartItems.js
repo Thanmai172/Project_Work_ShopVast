@@ -39,7 +39,7 @@ const CartItems = ({ mobileCart, laptopCart, clothingCart, mobileListings, lapto
         
         for (const item of cartItems) {
             try {
-                await axios.post('http://localhost:5000/api/cart', {
+                await axios.post('https://project-work-shopvast-2.onrender.com/api/cart', {
                     name: item.name,
                     price: item.price,
                     quantity: item.quantity,

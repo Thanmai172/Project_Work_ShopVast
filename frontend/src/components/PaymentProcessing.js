@@ -21,7 +21,7 @@ const PaymentProcessing = () => {
   const handlePayment = async () => {
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/payment", {
+      const response = await axios.post("https://project-work-shopvast-2.onrender.com/api/payment", {
         totalAmount,
         cartItems,
       });

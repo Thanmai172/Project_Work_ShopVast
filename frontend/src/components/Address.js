@@ -11,7 +11,7 @@ const Address = ({ onSubmit }) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:5000/api/addresses", {
+            const response = await axios.post("https://project-work-shopvast-2.onrender.com/api/addresses", {
                 address,
                 city,
                 postalCode,

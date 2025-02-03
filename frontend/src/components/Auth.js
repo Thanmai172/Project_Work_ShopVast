@@ -11,7 +11,7 @@ const navigate = useNavigate();
 
 const handleSubmit = async (event) => {  
     event.preventDefault();  
-    const url = formType === 'register' ? 'http://localhost:5000/api/users/register' : 'http://localhost:5000/api/users/login';  
+    const url = formType === 'register' ? 'https://project-work-shopvast-2.onrender.com/api/users/register' : 'https://project-work-shopvast-2.onrender.com/api/users/login';  
     
     try {  
     const response = await axios.post(url, { username, email, password });  
