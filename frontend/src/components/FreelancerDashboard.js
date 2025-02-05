@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Address from '../components/Address'; // Import the Address component
 import CartItems from './CartItems';
 // import CartItemsAPI from './CartItemsAPI'; // API-based cart
+import JobList from './JobList';
 
 
 const FreelancerDashboard = () => {  
@@ -15,6 +16,8 @@ const FreelancerDashboard = () => {
     const [paymentSuccess] = useState(false);  
     const [addressVisible, setAddressVisible] = useState(false); // State to manage address visibility 
     const [cartVisible, setCartVisible] = useState(false); 
+    const [showJobs, setShowJobs] = useState(false); 
+       
     // const [useAPI, setUseAPI] = useState(false); // Toggle between API and local cart
 
 
@@ -585,7 +588,7 @@ const FreelancerDashboard = () => {
                     </ul>
 
 
-                    <button onClick={() => setCartVisible(!cartVisible)}>
+            <button onClick={() => setCartVisible(!cartVisible)}>
                 {cartVisible ? 'Hide Cart' : 'Cart Items'}
             </button>
 
@@ -616,7 +619,13 @@ const FreelancerDashboard = () => {
             )}  
             {paymentSuccess && (  
                 <p style={{ color: 'green' }}>Payment successful! Thank you for your purchase.</p>  
-            )}  
+            )}
+            
+            <button onClick={() => setShowJobs(!showJobs)}>
+                {showJobs ? 'Hide Job Listings' : 'Show Job Listings'}
+            </button>
+
+            {showJobs && <JobList />}  
         </div>  
     );
     

@@ -6,10 +6,11 @@ const cors = require('cors');
 
 // Importing routes  
 const userRoutes = require('./routes/user');  // User routes  
-const jobRoutes = require('./routes/job');    // Job routes  
 const addressRoutes = require('./routes/address'); // Address routes 
 const cartRoutes = require('./routes/cartItems'); // Import cart routes
 const paymentRoutes = require("./routes/payment");
+const employeeRoutes = require("./routes/employeeRoutes"); // Employee routes
+const freelancerRoutes = require("./routes/freelancerRoutes"); // Freelancer routes
 
 
 
@@ -18,7 +19,9 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware  
 app.use(cors());  
-app.use(bodyParser.json());   
+app.use(bodyParser.json());  
+app.use("/uploads", express.static("uploads")); // Serve uploaded files
+
 
 // Database Connection  
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })  
@@ -27,10 +30,11 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedT
 
 // Routes  
 app.use('/api/users', userRoutes); // User routes  
-app.use('/api/jobs', jobRoutes);   // Job routes   
 app.use('/api/addresses', addressRoutes); // Address routes  
 app.use('/api/cart', cartRoutes); // Use cart routes
 app.use("/api/payment", paymentRoutes);
+app.use("/api/employees", employeeRoutes); // Employee applications
+app.use("/api/freelancers", freelancerRoutes); // Freelancer applications
 
 
 
