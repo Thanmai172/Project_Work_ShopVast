@@ -515,7 +515,7 @@ const FreelancerDashboard = () => {
 
     return (  
         <div>  
-            <h1>JobVisit and E commerce Website</h1>  
+            <h1>JobHub & Explore</h1>  
     
             <input  
                 type="text"  

@@ -13,7 +13,7 @@
         <Router>  
           <div className="App">  
             <header className="App-header">  
-              <h1>Employ & Explore</h1>  
+              <h1>JobHub & Explore</h1>  
             </header>  
             <main>  
               <Routes>  
@@ -23,7 +23,7 @@
                 <Route path="/freelancer-service-listings" element={<ServiceListings />} />  
                 <Route path="/freelancer-reviews" element={<Reviews />} />  
                 <Route path="/payment" element={<PaymentProcessing />} />
-                <Route path="/" element={<h2>Employ & Explore<br/><a href="/auth">Login/Register</a></h2>} />  
+                <Route path="/" element={<h2>JobHub & Explore<br/><a href="/auth">Login/Register</a></h2>} />  
               </Routes>  
             </main>  
           </div>  
