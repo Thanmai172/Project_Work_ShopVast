@@ -621,11 +621,14 @@ const FreelancerDashboard = () => {
                 <p style={{ color: 'green' }}>Payment successful! Thank you for your purchase.</p>  
             )}
             
-            <button onClick={() => setShowJobs(!showJobs)}>
-                {showJobs ? 'Hide Job Listings' : 'Show Job Listings'}
-            </button>
+            <hr />  
+            <h1>JOBHUB</h1>
+        <button onClick={() => setShowJobs(!showJobs)}>
+            {showJobs ? 'Hide Job Listings' : 'Show Job Listings'}
+        </button>  
 
-            {showJobs && <JobList />}  
+        {showJobs && <JobList />}  
+        <hr /> 
         </div>  
     );
     
