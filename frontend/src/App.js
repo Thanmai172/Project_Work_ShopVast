@@ -23,7 +23,7 @@
                 <Route path="/freelancer-service-listings" element={<ServiceListings />} />  
                 <Route path="/freelancer-reviews" element={<Reviews />} />  
                 <Route path="/payment" element={<PaymentProcessing />} />
-                <Route path="/" element={<h2>SHOPVAST<br/><a href="/auth">Login/Register</a></h2>} />  
+                <Route path="/" element={<h2>JobVisit and E commerce Website<br/><a href="/auth">Login/Register</a></h2>} />  
               </Routes>  
             </main>  
           </div>  
